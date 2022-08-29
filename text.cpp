@@ -13,7 +13,7 @@ void Text::text(string CisloCviceni) {
 	else {
 		while (getline(f, line)) {
 			if ((line[0] == hledane[0]) && (line[1] == hledane[1]) && (line[2] == hledane[2])) {
-				cout << "\n" << line << "\n" << endl;
+				cout << line << "\n" << endl;
 				break;
 			}
 		}
