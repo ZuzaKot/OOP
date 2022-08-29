@@ -9,16 +9,22 @@ private:
 public:
 	Str() { buf = 0; };
 
-	Str dopln(string text);			// assignment
+	Str dopln(string text);			
 	//Str(const Str& s);
 	//Str(const char* s);
-	//~Str() { delete[] buf; };		// destruct
-	Str& operator=(const Str& s);	// copy
-	Str operator+(const Str& s);	// concat
-	//------------------------------------------------------------------
-	// Cviceni 5.6
-	bool operator==(const Str& s);			// compare equal
-	bool operator<=(const Str& s);			// compare less or equal
-	bool operator>=(const Str& s);			// compare more or equal
-	bool operator!=(const Str& s);			// compare not equal
+	~Str() { delete[] buf; };		
+	Str& operator=(const Str& s);	
+	Str operator+(const Str& s);	
+	bool operator==(const Str& s);			
+	bool operator<=(const Str& s);			
+	bool operator>=(const Str& s);			
+	bool operator!=(const Str& s);			
+};
+
+class Str_child :public Str {
+private:
+public:
+	Str_child(){};
+	~Str_child(){};
+	bool shodnost(string a, string b);
 };
